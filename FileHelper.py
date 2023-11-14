@@ -102,6 +102,9 @@ class CSVHelper():
 
 
 class JsonHelper():
+    '''
+    https://www.zhihu.com/tardis/zm/art/102274020?source_id=1005
+    '''
     def __init__(self) -> None:
         pass
 
