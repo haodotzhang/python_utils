@@ -1,0 +1,17 @@
+{
+    "run_mode": "Train",
+    "batch_size": 1024,
+    "input_columns": {
+        "xDeepFM": {
+            "Deep": [
+                "q_query"
+            ],
+            "Wide": [
+                "title"
+            ],
+            "CIN": [
+                "doc_id"
+            ]
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "model_x":{
+        "tasks":{
+            "CTR":{
+                "type":"binary",
+                "weight": 1.0
+            },
+            "TS": {
+                "type":"regression",
+                "weight": 1.0
+            }
+        },
+        "use_sample_weight": true,
+        "model_hyperparameter": {
+            "dnn_use_bn": true,
+            "dnn_layer_size": [512, 256],
+            "cin_layer_size": [128]
+        }
+    },
+    "optimizer":{
+        "FTRL": {
+            "scope": "Wide",
+            "learning_rate": 0.05,
+            "learning_rate_power": -0.5,
+            "initial_accumulator_value": 0.1,
+            "l1_regularization_strength": 2.0,
+            "l2_regularization_strength": 7.0,
+            "use_locking": false
+        },
+        "AdamAsync": {
+            "scope": "Global",
+            "learning_rate": 0.05,
+            "use_locking": false,
+            "clip_gradients": 5.0
+        }
+    }
+}
